@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+
+  mysql:
+    image: mysql/mysql-server
+
+  bookgrpcserver:
+    image: ${DOCKER_REGISTRY-}bookgrpcserver
+    build:
+      context: .
+      dockerfile: BookGrpcServer/Dockerfile
+    depends_on:
+      - mysql
+  
+  bookgrpcclient:
+    image: ${DOCKER_REGISTRY-}bookgrpcclient
+    build:
+      context: .
+      dockerfile: BookGrpcClient/Dockerfile
+    depends_on:
+      - bookgrpcserver
+
+  bookmvc:
+    image: ${DOCKER_REGISTRY-}bookmvc
+    build:
+      context: .
+      dockerfile: BookMvc/Dockerfile
+    depends_on:
+      - bookgrpcclient

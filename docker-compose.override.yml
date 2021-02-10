@@ -1,0 +1,43 @@
+version: '3.4'
+
+services:
+  mysql:
+    environment:
+      - MYSQL_ROOT_PASSWORD=root1234
+      - MYSQL_DATABASE=dbBooks
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=password
+      - ACCEPT_EULA=Y
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysqldb:/var/lib/mysql
+    restart: always
+
+  bookgrpcserver:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionString=Server=mysql;Database=dbBooks;User=myuser;Password=password
+    ports:
+      - "5100:80"
+
+  bookgrpcclient:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - urlGrpcPurchaseBook=http://bookgrpcserver:5100
+    ports:
+      - "5200:80"
+
+  bookmvc:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - urlPurchaseBook=http://bookgrpcclient:5200/
+    ports:
+      - "5300:80"
+
+volumes:
+   mysqldb:
+     external: false

@@ -1,0 +1,41 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "BookGrpcService";
+
+package BookApi;
+
+service BookServices{
+	rpc GetAllBooks(VoidRequest) returns (CustomerListBookResponse) {}
+	rpc GetBookById(CustomerGetOrDeleteBookRequest) returns (CustomerBookDataReponse) {}
+	rpc UpdateBook(CustomerCreateOrUpdateBookRequest) returns (CustomerBoolBookResponse) {}
+	rpc CreateBook(CustomerCreateOrUpdateBookRequest) returns (CustomerBoolBookResponse) {}
+    rpc DeleteBook(CustomerGetOrDeleteBookRequest) returns (CustomerBoolBookResponse) {}
+}
+
+message VoidRequest{
+
+}
+
+message CustomerGetOrDeleteBookRequest {
+	int64 id = 1;
+}
+
+message CustomerListBookResponse {
+	repeated CustomerBookDataReponse books = 1;
+}
+
+message CustomerCreateOrUpdateBookRequest{
+	CustomerBookDataReponse bookData = 1;
+}
+
+message CustomerBoolBookResponse {
+	bool error = 1;
+}
+
+message CustomerBookDataReponse {
+	int64 Id = 1;
+	string Name = 2;
+	double Price = 3;
+	string Category = 4;
+	string Author = 5;
+}
