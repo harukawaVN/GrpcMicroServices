@@ -1,0 +1,73 @@
+﻿<Properties StartupConfiguration="{1F871D86-460C-4CFC-A642-4E259247547A}|Default">
+  <MonoDevelop.Ide.ItemProperties.BookGrpcServer PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BookGrpcClient/Controllers/BookController.cs">
+    <Files>
+      <File FileName="BookGrpcServer/Protos/book.proto" Line="28" Column="12" />
+      <File FileName="BookGrpcServer/Services/BookService.cs" />
+      <File FileName="BookGrpcClient/Services/BookService.cs" />
+      <File FileName="BookGrpcServer/Startup.cs" />
+      <File FileName="BookGrpcServer/Mapper/BookMapper.cs" />
+      <File FileName="BookGrpcServer/Models/Book.cs" />
+      <File FileName="BookGrpcClient/Controllers/BookController.cs" Line="1" Column="1" />
+      <File FileName="BookGrpcServer/Models/dbBooksContext.cs" />
+      <File FileName="BookGrpcClient/Models/Book.cs" />
+      <File FileName="BookGrpcServer/obj/Debug/netcoreapp3.1/Protos/Book.cs" />
+      <File FileName="BookGrpcClient/Startup.cs" />
+      <File FileName="BookMvc/Startup.cs" />
+      <File FileName="docker-compose.yml" />
+      <File FileName="BookMvc/Controllers/BookController.cs" />
+      <File FileName="BookMvc/Views/Book/Details.cshtml" />
+      <File FileName="BookMvc/Views/Book/Edit.cshtml" />
+      <File FileName="BookMvc/Services/BookService.cs" />
+      <File FileName="BookGrpcServer/Program.cs" />
+      <File FileName="../../../../Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/docker/MonoDevelop.Docker/MSbuild/Sdks/Microsoft.Docker.Sdk/build/Microsoft.VisualStudio.Docker.Compose.targets" />
+      <File FileName="BookMvc/Views/Book/Create.cshtml" />
+      <File FileName="BookMvc/Views/Book/Delete.cshtml" />
+      <File FileName="BookMvc/Views/Book/Index.cshtml" />
+      <File FileName="BookGrpcClient/appsettings.json" />
+      <File FileName="BookGrpcClient/Properties/launchSettings.json" />
+      <File FileName="BookMvc/Extension/HttpClientExtension.cs" />
+      <File FileName="BookGrpcServer/appsettings.json" />
+      <File FileName="docker-compose.override.yml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GrpcMicroservices" expanded="True">
+            <Node name="BookGrpcClient" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="BookController.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="BookGrpcServer" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+            <Node name="BookMvc" expanded="True">
+              <Node name="Extension" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+            <Node name="docker-compose" expanded="True">
+              <Node name="docker-compose.yml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>BookIdentify/BookIdentify.csproj</String>
+    <String>IdentifyService/IdentifyService.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/hatruong/Projects/GrpcMicroservicesDataBase/BookGrpcClient/Services/BookService.cs" relfile="BookGrpcClient/Services/BookService.cs" line="34" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
